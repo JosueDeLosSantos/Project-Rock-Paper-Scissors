@@ -85,7 +85,7 @@ function game() {
     let pc = 0;
     let draws = 0;
     let result = ``;
-
+/*
     for (let i = 0; i < 5; i++) {
     
         let playerSelection = prompt("enter rock, paper or scissors;", );
@@ -102,19 +102,64 @@ function game() {
 
      }
 
+     */
+/*
      if (user >= 2 && user > pc) {
         result = `you are the winner, check the scores: you:${user.toString()}, computer:${pc.toString()}, draws:${draws.toString()}`;
      } else if (pc >= 2 && pc > user){
         result = `the computer is the winner, check the scores: you:${user.toString()}, computer:${pc.toString()}, draws:${draws.toString()}`;
-     } else if (draws == 3) {
+     } else  {
         result = `there is a draw, check the scores: you:${user.toString()}, computer:${pc.toString()}, draws:${draws.toString()}`;
      }
+*/
+    
+if (user >= 2 && user > pc) {
+    result = `you are the winner, check the scores: you:${user}, computer:${pc}, draws:${draws}`;
+ } else if (pc >= 2 && pc > user){
+    result = `the computer is the winner, check the scores: you:${user}, computer:${pc}, draws:${draws}`;
+ } else  {
+    result = `there is a draw, check the scores: you:${user}, computer:${pc}, draws:${draws}`;
+ }
 
-     return result;
+
+    return result;
 
 }
 
 
-console.log(game());
+const gameBox = document.querySelector('#game');
+const screen = document.createElement('div');
+screen.classList.add('screen');
+const title1 = document.createElement('p');
+title1.textContent = 'You have 5 rounds to play!';
+const screenSubtitle = document.createElement('div');
+screenSubtitle.classList.add('screenSubtitle');
+const title2 = document.createElement('p');
+title2.textContent = 'Choose your weapon!';
+const screenBtns = document.createElement('div');
+screenBtns.classList.add('screenBtns');
+//buttons
+const screenBtn1 = document.createElement('button');
+screenBtn1.textContent = "Rock";
+const screenBtn2 = document.createElement('button');
+screenBtn1.textContent = "Paper";
+const screenBtn3 = document.createElement('button');
+screenBtn1.textContent = "Scissors";
+
+
+
+
+function showGame(){
+
+    gameBox.appendChild(screen);
+    screen.appendChild(title1);
+    gameBox.appendChild(screenSubtitle);
+    screenSubtitle.appendChild(title2);
+    gameBox.appendChild(screenBtns);
+
+}
+
+const btn = document.querySelector('#button');
+btn.addEventListener('click', showGame);
 
 

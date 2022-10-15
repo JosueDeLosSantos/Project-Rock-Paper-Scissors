@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#button{
+    padding: 10px 20px;
+    font-size: 24px;
+    margin: 30px auto 0 auto;
+    background: #ffc107;
+    border-radius: 10px;
+}
+
+#button:hover{
+    background: #ff9800;
+}
+
+#button:active{
+    background: #FF5722;
+    box-shadow: 0px 0px 10px rgb(255 87 34 / 90%);
+}
+
+#game {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 10px;
+}
+
+
+.screen{
+    padding: 70px 150px;
+    background: rgb(220 219 219 / 75%);
+    border-radius: 5px;
+    margin: auto;
+}
+
+.screenSubtitle{
+    text-align: center;
+}
+
