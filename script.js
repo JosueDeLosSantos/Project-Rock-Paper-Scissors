@@ -191,10 +191,12 @@ function showGame2(){
 
 }
 
+function revelation(e){
+    //console.log(typeof(e.target.innerText))
+    console.log(e.target.innerText)
+}
+
 
 btn.addEventListener('click', showGame);
 startBtn.addEventListener('click', showGame2);
-
-
-
-
+btnListArr.forEach(btnListArr => btnListArr.addEventListener('click', revelation));
