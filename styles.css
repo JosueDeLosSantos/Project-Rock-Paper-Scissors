@@ -111,3 +111,9 @@ p {
 
 /*rock color: rgb(158 119 132);
   scissors color: rgb(191 193 205);*/
+
+
+  /*
+  <div id="game">
+        <div class="screen"><p>You are playing against the PC, the first to get 5 points wins. your score will show on this screen!</p></div><div class="screenSubtitle"></div><button class="startBtn">Start</button></div>
+  */
