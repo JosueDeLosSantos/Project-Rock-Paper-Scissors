@@ -127,39 +127,72 @@ if (user >= 2 && user > pc) {
 }
 
 
+const mainSelector = document.querySelector('main');
+const btn = document.querySelector('#button');
 const gameBox = document.querySelector('#game');
 const screen = document.createElement('div');
 screen.classList.add('screen');
 const title1 = document.createElement('p');
-title1.textContent = 'You have 5 rounds to play!';
+const startBtn = document.createElement('button');
+startBtn.textContent = "Start";
+startBtn.classList.add('startBtn');
+
+
+title1.textContent = 'You have 5 rounds to play. your score will show on this screen!';
 const screenSubtitle = document.createElement('div');
 screenSubtitle.classList.add('screenSubtitle');
 const title2 = document.createElement('p');
 title2.textContent = 'Choose your weapon!';
 const screenBtns = document.createElement('div');
-screenBtns.classList.add('screenBtns');
+screenBtns.classList.add('btnsList');
 //buttons
 const screenBtn1 = document.createElement('button');
+screenBtn1.classList.add('screenBtns');
 screenBtn1.textContent = "Rock";
 const screenBtn2 = document.createElement('button');
-screenBtn1.textContent = "Paper";
+screenBtn2.classList.add('screenBtns');
+screenBtn2.textContent = "Paper";
 const screenBtn3 = document.createElement('button');
-screenBtn1.textContent = "Scissors";
+screenBtn3.classList.add('screenBtns');
+screenBtn3.textContent = "Scissors";
+//Iterate through all the buttons
+//const btnList = document.querySelectorAll('button');
 
 
 
 
 function showGame(){
 
+    mainSelector.removeChild(btn);
     gameBox.appendChild(screen);
     screen.appendChild(title1);
     gameBox.appendChild(screenSubtitle);
+    gameBox.appendChild(startBtn);
+
+    /*
     screenSubtitle.appendChild(title2);
     gameBox.appendChild(screenBtns);
+    screenBtns.appendChild(screenBtn1);
+    screenBtns.appendChild(screenBtn2);
+    screenBtns.appendChild(screenBtn3);*/
 
 }
 
-const btn = document.querySelector('#button');
+
+function showGame2(){
+
+    gameBox.removeChild(startBtn);
+    screen.removeChild(title1);
+    screenSubtitle.appendChild(title2);
+    gameBox.appendChild(screenBtns);
+    screenBtns.appendChild(screenBtn1);
+    screenBtns.appendChild(screenBtn2);
+    screenBtns.appendChild(screenBtn3);
+
+}
+
+
 btn.addEventListener('click', showGame);
+startBtn.addEventListener('click', showGame2);
 
 
