@@ -30,20 +30,15 @@ const screenBtns = document.querySelector('div[class="btnsList"]');
 const btnList = document.querySelectorAll('button[class="screenBtns"]');
 //Nodelists must be converted to arrays for us to be able to add events to them
 const btnListArr = Array.from(btnList);
-
-/*
+//replay button creation
 const replayButton = document.createElement('button')
 replayButton.innerText = "Replay";
 replayButton.classList.add('replayBtn')
-*/
-const replayButton = document.querySelector('button[class="replayBtn"]');
 
 
-
-
+//the function below removes the game buttons temporarily from the HTML document.
 function cleaningJob(){
     gameBox.removeChild(screenBtns);
-    gameBox.removeChild(replayButton);
 }
 
 cleaningJob();
@@ -153,7 +148,6 @@ function revelation(e){
         scoreboard.innerText = "You: "+ user +" PC: "+ pc;
         gameBox.removeChild(screenBtns);
         gameBox.removeChild(screenSubtitle);
-        e.stopPropagation();
         //Replay button
         gameBox.appendChild(replayButton);
 
@@ -164,26 +158,11 @@ function revelation(e){
         scoreboard.innerText = "You: "+ user +" PC: "+ pc;
         gameBox.removeChild(screenBtns);
         gameBox.removeChild(screenSubtitle);
-        e.stopPropagation();
         //Replay button
         gameBox.appendChild(replayButton);
     }
 
-    e.stopPropagation();
-    
-    
-    
-
 }
-
-
-
-
-
-btn.addEventListener('click', showGame);
-startBtn.addEventListener('click', showGame2);
-btnListArr.forEach(btn => btn.addEventListener('click', revelation))
-
 
 //refreshes the the page 
 function refreshBtn (){
@@ -195,7 +174,16 @@ function refreshBtn (){
 }
 
 
+
+btn.addEventListener('click', showGame);
+startBtn.addEventListener('click', showGame2);
+btnListArr.forEach(btn => btn.addEventListener('click', revelation))
 replayButton.addEventListener('click', refreshBtn)
+
+
+
+
+
 
 
 
