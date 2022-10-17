@@ -13,7 +13,7 @@ startBtn.classList.add('startBtn');
 const screen = document.createElement('div');
 screen.classList.add('screen');
 const title1 = document.createElement('p');
-title1.textContent = 'You have 5 rounds to play. your score will show on this screen!';
+title1.textContent = 'you will play against the PC, the first player to get 5 points wins!';
 const screenSubtitle = document.createElement('div');
 screenSubtitle.classList.add('screenSubtitle');
 const title2 = document.createElement('p');
