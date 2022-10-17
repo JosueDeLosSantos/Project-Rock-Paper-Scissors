@@ -107,6 +107,22 @@ p {
     box-shadow: 0px 0px 10px rgb(242 119 221 / 90%);
 }
 
+.replayBtn {
+    padding: 10px 20px;
+    font-size: 24px;
+    margin: 30px auto 0 auto;
+    background: #ffc107;
+    border-radius: 10px;
+}
+
+.replayBtn:hover{
+    background: #ff9800;
+}
+
+.replayBtn:active{
+    background: #FF5722;
+    box-shadow: 0px 0px 10px rgb(255 87 34 / 90%);
+}
 
 
 /*rock color: rgb(158 119 132);
